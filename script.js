@@ -1,5 +1,7 @@
 document.title = 'QUICKEAT'
 
+const navDrop = document.querySelector('.heading')
+
 const ulEl = document.querySelectorAll('#ulEl');
 
 ulEl.forEach((aHover) => {
@@ -23,7 +25,7 @@ orderBtn.forEach((orderEl) => {
         let order = {
             image: orderNow.querySelector('img').src,
             name: orderNow.querySelector('#name').innerHTML,
-            price: orderNow.querySelector('#price').innerHTML,
+            price: orderNow.querySelector('#price').innerHTML.replace(/[,]/g, ''),
             quantity: 1,
             id: Math.floor(Date.now() + Math.random())
 
@@ -33,7 +35,7 @@ orderBtn.forEach((orderEl) => {
         addItemTocart(order);
     })
 })
-//replace(/[₦,]/g, ''),
+
 
 function addItemTocart(item) {
     const cartItem = JSON.parse(localStorage.getItem("cart-items")) || [];
@@ -42,3 +44,16 @@ function addItemTocart(item) {
     localStorage.setItem("cart-items", JSON.stringify(cartItem))
     
 }
+
+let lastScrollTop = 0;
+window.onscroll = function() {
+  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  if (currentScroll > lastScrollTop) {
+    // Scrolling down
+    navDrop.style.top = "-50px";
+  } else {
+    // Scrolling up
+    navDrop.style.top = "0";
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+};
