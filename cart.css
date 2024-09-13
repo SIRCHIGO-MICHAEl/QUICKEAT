@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+section {
+    width: 100%;
+    background: #fff;
+
+}
+div.h1 {
+    width: fit-content;
+    margin: 1rem auto;   
+    font-size: 3rem;
+}
+section .main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+}
+.main .first {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 9rem;
+    border-bottom: #9995 1px solid;
+}
+.third {
+    width: 26%;
+    margin-left: 54rem;
+    position: fixed;
+    top: 22rem;
+    height: 13rem;
+    border-radius: 10px;
+    box-shadow: -5px -5px 5px #99999930,
+                5px 5px 5px #99999930;
+    
+}
+.array {
+    display: flex;
+    flex-direction: row;
+}
+section p, button {
+    display: inline;
+    margin-left: 2rem;
+    font-size: 17px;
+}
+.first button {
+    border: 1px solid orange; 
+    padding: .4rem .8rem;
+    background: rgba(153, 153, 153, 0.114); 
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.first button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.5s;
+    background: orange;
+    z-index: -1;
+
+}
+button:hover::before {
+    width: 100%;
+}
+section img{
+    margin:   0;
+    display: inline;
+    width: 7rem;
+}
+.third div.h3 {
+    text-align: center;
+}
+.third p {
+    margin: 2em 1rem;
+    color: #999;
+   
+}
+.third span {
+    margin-left: 7.5rem;
+    font-weight: bold;
+    color: black;
+}
+.third button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: .4rem;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 1rem;
+}
