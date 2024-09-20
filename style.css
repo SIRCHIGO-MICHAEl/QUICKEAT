@@ -45,6 +45,13 @@ div.img img {
 header > div ol {
     text-wrap: nowrap;
 }
+.dropNav {
+    background: #e8e1e1;
+    color: white;
+    ;
+
+
+}
 header > div ol a {
     margin-left: 1rem;
 }

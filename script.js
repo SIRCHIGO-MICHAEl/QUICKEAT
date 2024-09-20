@@ -45,15 +45,23 @@ function addItemTocart(item) {
     
 }
 
-let lastScrollTop = 0;
-window.onscroll = function() {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScroll > lastScrollTop) {
-    // Scrolling down
-    navDrop.style.top = "-50px";
-  } else {
-    // Scrolling up
-    navDrop.style.top = "0";
-  }
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-};
+// let lastScrollTop = 0;
+// window.onscroll = function() {
+//   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+//   if (currentScroll > lastScrollTop) {
+//     // Scrolling down
+//     navDrop.style.top = "-85px";
+    
+    
+//   } else if(currentScroll == lastScrollTop){
+//     navDrop.classList.remove('dropNav')
+//   }
+//    else {
+//     // Scrolling up
+//     navDrop.style.top = "0";
+//     navDrop.style.position = 'sticky'
+//     navDrop.style.transition = '.3s'
+//     navDrop.classList.add('dropNav')
+//   }
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+// };
