@@ -184,27 +184,29 @@ article > #menu-p {
 article > #menu-p p {
     text-align: center;
 }
-article > div#orderMenu {
+article > div > div#orderMenu {
     width: 80%;
-    display: grid;
-    grid-template-columns: repeat(4,20%);
-    margin: 3rem auto;
-    grid-gap: 5%;
+    display: flex;
+    
+    /* display: grid;
+    grid-template-columns: repeat(4,20%);*/
+    margin: 3rem auto; 
 }
-article > div#orderMenu div img {
-    width: 80%;
+article > div > div#orderMenu div img {
+    width: 50%;
     display: block;
     padding-top: -1rem;
     margin: auto;
 }
-article > div#orderMenu div p {
+article > div >  div#orderMenu div p {
     width: 70%;
     margin: .2rem auto;
     font-size: 1rem;
     font-weight: 600;
-    align-self: center;
+    align-items: center;
+    text-align: center;
 }
-article > div#orderMenu div a button{
+article > div > div#orderMenu div a button{
     display: block;
     width: 1;
     padding: .6rem;
@@ -215,7 +217,9 @@ article > div#orderMenu div a button{
     font-weight: 600;
     text-wrap: nowrap;
     cursor: pointer;
+    text-align: center;
     transition: 0.3s;
+    align-items: center;
     margin: .5rem auto;
 }
 article > div#orderMenu div p:not(#name) {
@@ -368,4 +372,23 @@ aside .spanq {
     margin-left: .5rem;
 }
 
+
+
+@media (max-width: 1150px) {
+    /* body{
+        color: red;
+    } */
+
+    .delivery-img{
+        width: 85%;
+        margin-left: -10rem;
+    }
+    ul,ol {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+
+}
 
