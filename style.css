@@ -187,9 +187,6 @@ article > #menu-p p {
 article > div > div#orderMenu {
     width: 80%;
     display: flex;
-    
-    /* display: grid;
-    grid-template-columns: repeat(4,20%);*/
     margin: 3rem auto; 
 }
 article > div > div#orderMenu div img {
@@ -386,9 +383,41 @@ aside .spanq {
     ul,ol {
         display: none;
     }
+    #orderMenu > div > #name, #price {
+        font-size: .9rem;
+    }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1025px) {
+    #orderMenu > div > #name, #price {
+        font-size: .8rem;
+    }
+}
 
+@media (max-width: 932px) {
+    header > div.write{
+        display: block;
+    }
+    header > div > div.delivery-img img {
+        margin-left: 12rem;
+        width: 90%;
+        
+    }
+    section > div.instruction {
+        display: block;
+    }
+    section > div.instruction div {
+        margin-top: 3rem;
+    }
+    article > div > div#orderMenu {
+        display: block;
+    }
+
+    article > div > div#orderMenu div {
+        width: 90%;
+    }
+    article > div > div#orderMenu img {
+        width: 100%;
+    }
 }
 
