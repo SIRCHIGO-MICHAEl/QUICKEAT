@@ -50,37 +50,27 @@ const burger = document.querySelector('#burger-main');
 burger.addEventListener('click', () => {
   burger.classList.toggle('open')
   document.querySelector('.burger').classList.toggle('burger-slide')
+  // burger.style.position = 'fixed'
+  // burger.style.left = '65rem'
 })
 
-// let scrollingdown = document.querySelector('header, div')
-// let scrollingback = window.scrollY
-
-// if(scrollingback > scrollingdown ) {
-//   document.querySelector('.heading').setAttribute('class','dropNav')
-    
-// }else{
-    
-//   document.querySelector('.heading').setAttribute('class','heading')
-
-// }
-
-let lastScrollTop = 0;
-window.onscroll = function() {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScroll > lastScrollTop) {
-    // Scrolling down
-    navDrop.style.top = "-105px";
+// let lastScrollTop = 0;
+// window.onscroll = function() {
+//   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+//   if (currentScroll > lastScrollTop) {
+//     // Scrolling down
+//     navDrop.style.top = "-105px";
     
     
-  } else if(currentScroll == lastScrollTop){
-    navDrop.classList.remove('dropNav')
-  }
-   else {
-    // Scrolling up
-    navDrop.style.top = "0";
-    navDrop.style.position = 'sticky'
-    navDrop.style.transition = '.3s'
-    navDrop.classList.add('dropNav')
-  }
-  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-};
+//   } else if(currentScroll == lastScrollTop){
+//     navDrop.classList.remove('dropNav')
+//   }
+//    else {
+//     // Scrolling up
+//     navDrop.style.top = "0";
+//     navDrop.style.position = 'sticky'
+//     navDrop.style.transition = '.3s'
+//     navDrop.classList.add('dropNav')
+//   }
+//   lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+// };
