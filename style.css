@@ -381,7 +381,9 @@ div.burger>ul a{
 
 
 @media (max-width: 1150px) {
-
+    body{
+        overflow-x: hidden;
+    }
     .delivery-img{
         width: 85%;
         margin-left: -10rem;
